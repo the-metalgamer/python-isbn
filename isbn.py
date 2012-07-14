@@ -116,7 +116,7 @@ class ISBN10(object):
 
             self.isbn = "".join(chars)
         else:
-            raise
+            raise ValueError("self.isbn must have an length of 9")
 
     def converttoISBN13(self):
 
@@ -249,7 +249,7 @@ class ISBN13(object):
             chars.append(check)
             self.isbn = "".join(chars)
         else:
-            raise
+            raise ValueError("self.isbn must have an lengtt of 12")
 
     def converttoISBN10(self):
 
