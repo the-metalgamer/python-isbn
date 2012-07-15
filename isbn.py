@@ -91,7 +91,7 @@ class ISBN10(object):
             else:
                 return False
         else:
-            raise
+            raise ValueError("self.isbn must have an length of 10")
 
     def calculate_checksum(self, force=False):
 
@@ -249,7 +249,7 @@ class ISBN13(object):
             chars.append(check)
             self.isbn = "".join(chars)
         else:
-            raise ValueError("self.isbn must have an lengtt of 12")
+            raise ValueError("self.isbn must have an length of 12")
 
     def converttoISBN10(self):
 
